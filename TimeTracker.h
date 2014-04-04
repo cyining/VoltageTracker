@@ -7,7 +7,7 @@ public:
   {
     t_ = millis();
   }
-  unsigned long getTime()
+  unsigned long getTime() const
   {
     return t_;
   }
@@ -15,11 +15,11 @@ public:
   {
     t_ += 1000;
   }
-  bool ready(unsigned long t)
+  bool ready(unsigned long t) const
   {
     return t > getTime();
   }
-  void sprint(char* buf, unsigned long t)
+  void sprint(char* buf, unsigned long t) const
   {
     t /= 1000; // seconds
     byte ss = t % 60; // SS
