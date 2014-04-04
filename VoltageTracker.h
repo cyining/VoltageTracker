@@ -22,11 +22,11 @@ public:
     word v = analogRead(pin_);
     v_ = v_ - getVoltage() + v;
   }
-  word getVoltage(byte extraBits = 0)
+  word getVoltage(byte extraBits = 0) const
   {
     return v_ >> (MEASURE_EXTRA_BITS - extraBits);
   }
-  void sprint(char* buf)
+  void sprint(char* buf) const
   {
   #if PRECISE_VOLTAGE
     word v = getVoltage(PRESENT_EXTRA_BITS);
