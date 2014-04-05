@@ -11,9 +11,9 @@ public:
   {
     return t_;
   }
-  void next()
+  void next(word msec = 1000)
   {
-    t_ += 1000;
+    t_ += msec;
   }
   bool ready(unsigned long t) const
   {
