@@ -16,6 +16,10 @@ public:
     pin_ = pin;
     v_ = 0;
   }
+  void mode(byte mode)
+  {
+    pinMode(pin_, mode);
+  }
   void measure()
   {
     word v = analogRead(pin_);
