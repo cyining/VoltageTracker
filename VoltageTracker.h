@@ -20,8 +20,10 @@ public:
   {
     pinMode(pin_, mode);
   }
-  void measure()
+  void measure(bool preRead = true)
   {
+    if (preRead)
+      analogRead(pin_);
     word v = analogRead(pin_);
     v_ = v_ - getValue() + v;
   }
