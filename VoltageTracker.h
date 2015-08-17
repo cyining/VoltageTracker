@@ -18,7 +18,6 @@ public:
   }
   void measure()
   {
-    pinMode(pin_, INPUT);
     word v = analogRead(pin_);
     v_ = v_ - getValue() + v;
   }
